@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <title>Hero Section | GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '375px',
+            md: '768px',
+            lg: '1440px',
+          },
+          container: {
+            center: true,
+            sm: '100%',
+            md: '100%',
+            lg: '1280px',
+            padding: {
+              sm: '16px',
+              md: '32px',
+              lg: '32px',
+            },
+          },
+          extend: {
+            fontFamily: {
+              noto: 'Noto Sans, sans-serif',
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+    <style type="text/tailwindcss">
+      .btn {
+        @apply w-full rounded-md max-w-[208px] max-h-[175px] p-4 disabled:bg-neutral-100 focus:outline-none focus:ring;
+      }
+      .btn-primary {
+        @apply btn hover:bg-indigo-800 text-white bg-indigo-700;
+      }
+      .btn-secondary {
+        @apply btn hover:bg-neutral-50 text-neutral-900 shadow;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      class="container flex flex-wrap lg:flex-nowrap justify-between items-center gap-4 sm:gap-8 w-full mt-[96px] p-4"
+    >
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-noto font-semibold"
+          >
+            Well crafted abstract images
+          </h1>
+          <p class="text-lg font-noto text-neutral-600">
+            High quality abstract images for your projects, wallpaper
+            and presentations.
+          </p>
+        </div>
+
+        <div class="flex gap-4 sm:gap-8">
+          <button class="btn-secondary">Learn more</button>
+          <button class="btn-primary">See pricing</button>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <img
+          src="./img/prism.png"
+          alt=""
+          class="object-cover"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <div class="credits text-center w-full">
+      A challenge by
+      <a
+        href="https://www.greatfrontend.com/projects?ref=challenges"
+        target="_blank"
+        >GreatFrontEnd Projects</a
+      >. Built by
+      <a href="https://github.com/qianzhong516" target="_blank"
+        >qianzhong516</a
+      >.
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
