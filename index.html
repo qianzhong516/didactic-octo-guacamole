@@ -29,10 +29,8 @@
           },
           container: {
             center: true,
-            sm: '100%',
-            md: '100%',
-            lg: '1280px',
             padding: {
+              DEFAULT: '16px',
               sm: '16px',
               md: '32px',
               lg: '32px',
@@ -49,7 +47,7 @@
     <link rel="icon" href="img/favicon.ico" sizes="any" />
     <style type="text/tailwindcss">
       .btn {
-        @apply w-full rounded-md max-w-[208px] max-h-[175px] p-4 disabled:bg-neutral-100 focus:outline-none focus:ring;
+        @apply w-full rounded-md max-w-[208px] p-4 disabled:bg-neutral-100 focus:outline-none focus:ring;
       }
       .btn-primary {
         @apply btn hover:bg-indigo-800 text-white bg-indigo-700;
@@ -61,9 +59,9 @@
   </head>
   <body>
     <div
-      class="container flex flex-wrap lg:flex-nowrap justify-between items-center gap-4 sm:gap-8 w-full mt-[96px] p-4"
+      class="container grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 items-center gap-4 sm:gap-8 w-full lg:max-w-[1280px] mt-[96px]"
     >
-      <div class="flex flex-col gap-8">
+      <div class="flex flex-col gap-8 col-span-4 md:col-span-6">
         <div class="flex flex-col gap-4">
           <h1
             class="text-4xl md:text-5xl lg:text-6xl text-neutral-900 font-noto font-semibold"
@@ -82,7 +80,7 @@
         </div>
       </div>
 
-      <div class="w-full">
+      <div class="col-span-4 md:col-span-6 w-full">
         <img
           src="./img/prism.png"
           alt=""
